@@ -39,7 +39,6 @@ import {MatMenuModule} from '@angular/material/menu';
 
 import { AuthenticationService } from './Services/authentication.service';
 import { PetparentProfileComponent } from './petparent-profile/petparent-profile.component';
-import { VetProfileComponent } from './vet-profile/vet-profile.component';
 import { RecepProfileComponent } from './recep-profile/recep-profile.component';
 
 import { RecepDialogComponent } from './recep-profile/recep-dialog/recep-dialog.component';
@@ -47,12 +46,13 @@ import { filter } from 'rxjs';
 //import { FilterPipe } from './CustomPipes/filter.pipe';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 // import { FilterPipe2 } from './CustomPipes/fiter2.pipe';
-import { VetdialogComponent } from './vet-profile/vet-dialog/vet-dialog.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MsalAngularConfiguration, MsalInterceptor, MSAL_CONFIG, MSAL_CONFIG_ANGULAR, MsalService, MsalModule } from '@azure/msal-angular';
 import { Configuration } from 'msal';
 import { msalConfig, msalAngularConfig } from './app-config';
 import { LandingScreenModule } from './landing-screen/landing-screen.module';
+import { DoctorFlowModule } from './doctor-flow/doctor-flow.module';
+import { RouterModule } from '@angular/router';
 
 
 function MSALConfigFactory(): Configuration {
@@ -74,9 +74,7 @@ function MSALAngularConfigFactory(): MsalAngularConfiguration {
   
     SidenavComponent,
     HeaderComponent,
-    PetparentProfileComponent,
-    VetProfileComponent,
-    VetdialogComponent,
+    PetparentProfileComponent
   
   ],
   imports: [
@@ -115,6 +113,10 @@ function MSALAngularConfigFactory(): MsalAngularConfiguration {
     LandingScreenModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    DoctorFlowModule,
+    MatIconModule,
+    RouterModule,
+    MatMenuModule
   ],
   providers: [AuthenticationService, DatePipe, 
     {

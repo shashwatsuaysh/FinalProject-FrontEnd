@@ -5,10 +5,10 @@
                 <mat-card-title id="t1">Account Details</mat-card-title>
                 <mat-card-subtitle id="t3">Manage Your Account here</mat-card-subtitle>
             </div>
-            <button class="btn btn-danger" style="margin-left: 379px;
+            <a href='/vets/profile/EditVet/'><button class="btn btn-danger" style="margin-left: 379px;
             width: 54px;
             height: 35px;
-            color: white;" (click)="openDialog()">Edit</button>
+            color: white;" >Edit</button></a>
         </mat-card-header>
        <hr>
         <div class="d-flex flex-row;">
@@ -20,50 +20,56 @@
                     <table>
                         <tr>
                             <td style="padding: 0 15px;">
-                                <span id="name" *ngIf="vet">
-                                    Name:<strong> {{vet.VetName}}</strong><br />
+                                <span id="name">
+                                    Name:<strong>{{curVet.Name}}</strong><br />
                                 </span>
                             </td>
                             <td style="padding:0 30px ;">
-                                <span id="phnNo" *ngIf="vet">
-                                    Mobile No:<strong>{{vet.VetContactInfoDTO.PhoneNum}}</strong>
+                                <span id="phnNo" >
+                                    Mobile No:<strong>{{curVet.Mobile}}</strong>
                                 </span>
                             </td>
                         </tr>
                         <br>
                         <tr>
                             <td style="padding: 0 15px;">
-                                <span id="nipNo" *ngIf="vet">
-                                    NPINo:<strong>{{vet.NPINum}}</strong>
+                                <span id="nipNo">
+                                    NPINo:<strong>{{curVet.NPI}}</strong>
                                 </span>
                             </td>
                             <td style="padding:0 30px ;">
-                                <span id="email" *ngIf="vet">
-                                    Email: <strong>{{vet.VetContactInfoDTO.EmailId}}</strong>
+                                <span id="email" >
+                                    Email: <strong>{{curVet.Email}}</strong>
                                 </span>
                             </td>
                         </tr>
                         <br>
                         <tr>
                             <td style="padding:0 15px;">
-                                <span id="speciality" *ngIf="vet">
-                                    Speciality:<strong>{{vet.Speciality}}</strong>
+                                <span id="speciality" >
+                                    Speciality:<strong>{{curVet.Speciality}}</strong>
                                 </span>
                             </td>
                             <td style="padding:0 30px ;">
-                                <span id="clinic" *ngIf="vet">
-                                    Clinic: <strong>{{vet.VetContactInfoDTO.ClinicAddress}}</strong>
+                                <span id="clinic" >
+                                    Clinic: <strong>{{curVet.Clinic}}</strong>
                                 </span>
                             </td>
                         </tr>
                         <br>
                     </table>
 
-                    <br />
 
-                </mat-card-content>
+
+                   <br />
+
+
+
+               </mat-card-content>
             </div>
         </div>
 
-    </mat-card>
+
+
+   </mat-card>
 </div>

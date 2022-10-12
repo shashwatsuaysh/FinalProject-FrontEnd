@@ -3,16 +3,21 @@ import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { MsalGuard } from '@azure/msal-angular';
 import { loginRequest } from './app-config';
 import { AllPetsVetsComponent } from './dashboard/all-pets-vets/all-pets-vets.component';
+import { EditVetComponent } from './doctor-flow/profile/edit-vet/edit-vet.component';
+import { VetPfComponent } from './doctor-flow/profile/vet-pf/vet-pf.component';
 import { LoginComponent } from './login/login.component';
 import { PetparentProfileComponent } from './petparent-profile/petparent-profile.component';
 import { RecepProfileComponent } from './recep-profile/recep-profile.component';
 import { SignupComponent } from './signup/signup.component';
-import { VetProfileComponent } from './vet-profile/vet-profile.component';
+
 import { ViewDetailsComponent } from './view-details/view-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'landing', pathMatch: 'full' },
+  {path:'vets/profile',component:VetPfComponent},
+  {path:'vets/profile/EditVet/:id',component:EditVetComponent},
  
+
 
   {path:'login',component:LoginComponent},
   {
@@ -27,7 +32,6 @@ const routes: Routes = [
  { path: 'signup', component: SignupComponent },
   { path: 'details', component: AllPetsVetsComponent },
   { path: 'petparentprofile', component: PetparentProfileComponent},
-  { path: 'vetprofile', component: VetProfileComponent },
   
   { path: 'recepprofile', component: RecepProfileComponent},
   {

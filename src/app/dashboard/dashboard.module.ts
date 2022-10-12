@@ -34,7 +34,6 @@ import { AppointmentgridviewComponent } from './appointmentgridview/appointmentg
 import { AddAppointmentsComponent } from './add-appointment/add-appointment.component';
 // import { FilterPipe } from '../CustomPipes/filter.pipe';
 // import { AgePipe } from '../CustomPipes/Age.Pipe';
-import { VetProfileComponent } from '../vet-profile/vet-profile.component';
 import { RecepAddAppointmentComponent } from './recep-add-appointment/recep-add-appointment.component';
 import { PetAddAppointmentComponent } from './pet-add-appointment/pet-add-appointment.component';
 import { ReceptionistService } from '../Services/receptionist.service';
